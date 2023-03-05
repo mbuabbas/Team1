@@ -1,4 +1,4 @@
-package java.utils;
+package utils;
 
 import org.openqa.selenium.WebDriver;
 import tests.BaseTest;
