@@ -9,7 +9,10 @@ import utils.ConfigReader;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.support.FindBy;
+
 public class BaseTest {
+
     public WebDriver driver;
 
     @BeforeMethod
@@ -28,5 +31,6 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get(ConfigReader.readProperty("configuration.properties","url"));
+
     }
 }
