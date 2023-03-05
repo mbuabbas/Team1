@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class footerPage extends BasePage{
 
     public footerPage(WebDriver driver){
-      //  super(driver);
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
