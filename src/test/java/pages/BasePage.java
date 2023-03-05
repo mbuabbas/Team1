@@ -1,4 +1,8 @@
 package pages;
 
-public class BasePage {
+
+import tests.BaseTest;
+
+public class BasePage extends BaseTest {
+
 }
