@@ -1,4 +1,4 @@
-package java.tests;
+package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -9,28 +9,26 @@ import utils.ConfigReader;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.support.FindBy;
 
-public class BaseTest {
+    public class BaseTest {
+        public WebDriver driver;
 
-    public WebDriver driver;
+        @BeforeMethod
+        public void baseSetUp(){
+            initializeDriver();
+        }
 
-    @BeforeMethod
-    public void baseSetUp(){
-        initializeDriver();
+        @AfterMethod
+        public void baseTearDown(){
+            driver.quit();
+        }
+
+        public void initializeDriver(){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.get(ConfigReader.readProperty("configuration.properties","url"));
+        }
     }
 
-    @AfterMethod
-    public void baseTearDown(){
-        driver.quit();
-    }
-
-    public void initializeDriver(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get(ConfigReader.readProperty("configuration.properties","url"));
-
-    }
-}

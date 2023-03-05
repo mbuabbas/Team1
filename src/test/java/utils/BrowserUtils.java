@@ -3,8 +3,6 @@ package java.utils;
 import org.openqa.selenium.WebDriver;
 import tests.BaseTest;
 
-import java.tests.BaseTest;
-
 public class BrowserUtils extends BaseTest {
     public static void switchToNewWindow(WebDriver driver){
         for(String each: driver.getWindowHandles()){

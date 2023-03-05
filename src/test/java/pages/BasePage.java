@@ -1,8 +1,8 @@
-package java.pages;
+package pages;
 
 
 import tests.BaseTest;
 
-public class BasePage extends BaseTest{
+public class BasePage extends BaseTest {
 
 }
