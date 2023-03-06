@@ -36,6 +36,10 @@ public class BasePage extends BaseTest
             }
         }
     }
+    public static void scrollIntoView(WebElement element, WebDriver driver){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].scrollIntoView(true)", element);
+    }
     public void sendKeys(WebElement element, String inputText)
     {
         BaseTest.reportManager.logLocatorInfo("Entered text: " + inputText + " ", element);
@@ -48,6 +52,12 @@ public class BasePage extends BaseTest
         BaseTest.reportManager.logLocatorInfo("Retrieved TEXT: ", element);
         highlightElement(element);
         return element.getText();
+    }
+    public boolean isDisplayed (WebElement element)
+    {
+        BaseTest.reportManager.logLocatorInfo("Displayed : ", element);
+        highlightElement(element);
+        return element.isDisplayed();
     }
     public void click(WebElement element)
     {
