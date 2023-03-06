@@ -20,5 +20,7 @@ public class InventoryPage extends BasePage
     public WebElement facebookSign;
     @FindBy(xpath = "//a[@href='https://www.linkedin.com/company/sauce-labs/']")
     public WebElement linkedInSign;
+    @FindBy(xpath = "//a[@class='shopping_cart_link']")
+    public WebElement shoppingCartLink;
 
 }

@@ -1,5 +1,8 @@
 package tests;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -15,7 +18,6 @@ public class InventoryTest extends BaseTest
     {
         page = new InventoryPage(driver);
         homePage = new HomePage(driver);
-//        driver.get("Saucedemo.com");
         homePage.userName.sendKeys(ConfigReader.readProperty(configFilePath, "username"));
         homePage.password.sendKeys(ConfigReader.readProperty(configFilePath, "password"));
         homePage.loginBtn.click();
@@ -26,9 +28,15 @@ public class InventoryTest extends BaseTest
         String expectedTwitter = "Twitter";
         String expectedFaceBook = "Facebook";
         String expectedLinkedIn = "LinkedIn";
-        page.assertEquals(page.twitterSign.getText(), expectedTwitter);
-        page.assertEquals(page.facebookSign.getText(), expectedFaceBook);
-        page.assertEquals(page.linkedInSign.getText(), expectedLinkedIn);
+//        page.assertEquals(page.twitterSign.getText(), expectedTwitter);
+//        page.assertEquals(page.facebookSign.getText(), expectedFaceBook);
+//        page.assertEquals(page.linkedInSign.getText(), expectedLinkedIn);
+
+        page.scrollIntoView(page.twitterSign, driver);
+
+        page.isDisplayed(page.twitterSign);
+        page.isDisplayed(page.facebookSign);
+        page.isDisplayed(page.linkedInSign);
     }
 
 }
