@@ -10,15 +10,15 @@ import pages.BasePage;
 
 
         public class LoginPage extends BasePage {
-            private WebDriver driver;
+
 
             public LoginPage(WebDriver driver) {
                 super(driver);
                 PageFactory.initElements(driver, this);
-                this.driver = driver;
+
             }
 
-            @FindBy(id = "username")
+            @FindBy(id = "user-name")
             public WebElement usernameField;
             @FindBy(id = "password")
             public WebElement passwordField;

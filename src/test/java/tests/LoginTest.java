@@ -3,11 +3,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
 import pages.LoginPage;
 import utils.ConfigReader;
 
     public class LoginTest extends BaseTest{
         private LoginPage page;
+
 
         @BeforeMethod
         public void setUp(){
@@ -16,8 +18,8 @@ import utils.ConfigReader;
         }
         @Test(testName="US 301 - Verify standard_user can login with right password")
         public void test301(){
-            page.usernameField.sendKeys("standart_user");
-            page.passwordField.sendKeys("secret_sauce");
+            page.usernameField.sendKeys("username");
+            page.passwordField.sendKeys("password");
             page.signInBtn.click();
         }
             @Test(testName = "US 302- When locked out user tries to login with right password I would like to see an error message")
