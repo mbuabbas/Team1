@@ -9,13 +9,11 @@ import pages.HomePage;
 import pages.InventoryPage;
 import utils.ConfigReader;
 
-public class InventoryTest extends BaseTest
-{
+public class InventoryTest extends BaseTest {
     private InventoryPage page;
     private HomePage homePage;
     @BeforeMethod
-    public void setup()
-    {
+    public void setup() {
         page = new InventoryPage(driver);
         homePage = new HomePage(driver);
         homePage.userName.sendKeys(ConfigReader.readProperty(configFilePath, "username"));
