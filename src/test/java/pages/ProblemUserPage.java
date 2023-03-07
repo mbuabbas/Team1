@@ -5,13 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage extends BasePage
-{
-    public HomePage (WebDriver driver)
-    {
+public class ProblemUserPage extends BasePage {
+    public WebDriver driver;
+
+    public ProblemUserPage(WebDriver driver){
+
         super(driver);
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(id = "user-name")
     public WebElement userName;
     @FindBy(id = "password")
@@ -20,6 +22,9 @@ public class HomePage extends BasePage
     public WebElement loginBtn;
 
 
+
+    @FindBy(xpath = "//img[@alt='Sauce Labs Backpack']")
+    public WebElement photo;
 
 
 }
