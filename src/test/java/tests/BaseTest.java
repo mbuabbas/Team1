@@ -45,8 +45,8 @@ public class BaseTest
     @AfterMethod(alwaysRun = true)
     public void baseTearDown(ITestResult result)
     {
-        reportManager.closeTestReport(result);
-        driver.quit();
+        //reportManager.closeTestReport(result);
+        //driver.quit();
     }
 
     @AfterSuite(alwaysRun = true)

@@ -14,12 +14,12 @@ public class ProblemUserPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "user-name")
-    public WebElement userName;
-    @FindBy(id = "password")
-    public WebElement password;
+    @FindBy(xpath = "//input[@id='user-name']")
+    public WebElement username1;
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement password1;
     @FindBy(id = "login-button")
-    public WebElement loginBtn;
+    public WebElement loginBtn1;
 
 
 

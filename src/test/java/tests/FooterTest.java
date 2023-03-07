@@ -13,7 +13,6 @@ import java.security.PublicKey;
 public class FooterTest extends BaseTest {
 
     private FooterPage page;
-    //private HomePage homePage;
 
 @BeforeMethod
     public void setUp(){
@@ -31,7 +30,7 @@ public class FooterTest extends BaseTest {
     String expected = "© 2022 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
     String actual = page.footer.getText();
 
-      Assert.assertEquals(expected, actual);
+      Assert.assertTrue(expected.equals(actual));
 
 
       //page.isDisplayed(page.footer);

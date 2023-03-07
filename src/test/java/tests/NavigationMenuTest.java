@@ -21,7 +21,7 @@ public class NavigationMenuTest extends BaseTest {
     public void setup() {
         page = new NavigationMenuPage(driver);
         homePage = new HomePage(driver);
-        homePage.userName.sendKeys(ConfigReader.readProperty(configFilePath, "standard_user"));
+        homePage.userName.sendKeys(ConfigReader.readProperty(configFilePath, "username"));
         homePage.password.sendKeys(ConfigReader.readProperty(configFilePath, "password"));
         homePage.loginBtn.click();
         page.linesbtn.click();
