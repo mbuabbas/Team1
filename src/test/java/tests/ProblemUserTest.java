@@ -33,6 +33,26 @@ public class ProblemUserTest extends BaseTest {
         page.loginBtn1.click();
 
 
+        String SauceLab0 = page.photo0.getAttribute("src");
+        System.out.println("this is name "+ SauceLab0);
+
+        String SauceLab1= page.photo1.getAttribute("src");
+        System.out.println("this is name "+ SauceLab1);
+
+        String Saucelab2 = page.photo2.getAttribute("src");
+        System.out.println("this is name "+ Saucelab2);
+
+        String SauceLab3 = page.photo3.getAttribute("src");
+        System.out.println("this is name  " + SauceLab3);
+
+        String SauceLab4 = page.photo4.getAttribute("src");
+        System.out.println("this is name "+ SauceLab4);
+
+        String SauceLab5 = page.photo5.getAttribute("src");
+        System.out.println("this is name "+ SauceLab5);
+
+
+
 
 
 
