@@ -27,6 +27,8 @@ import pages.BasePage;
 
             @FindBy(xpath = "//h3[@data-test='error']")
             public WebElement signInError;
+            @FindBy(xpath = "//span[@class='title']")
+            public WebElement productButton;
             public void signIn(String username, String password) {
                 usernameField.sendKeys(username);
                 passwordField.sendKeys(password);

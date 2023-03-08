@@ -18,9 +18,12 @@ import utils.ConfigReader;
         }
         @Test(testName="US 301 - Verify standard_user can login with right password")
         public void test301(){
-            page.usernameField.sendKeys("username");
-            page.passwordField.sendKeys("password");
+            page.usernameField.sendKeys(ConfigReader.readProperty(configFilePath, "username"));
+            page.passwordField.sendKeys(ConfigReader.readProperty(configFilePath, "password"));
             page.signInBtn.click();
+            String expected="Products";
+
+            page.assertEquals(page.productButton.getText(),expected);
         }
             @Test(testName = "US 302- When locked out user tries to login with right password I would like to see an error message")
         public void test302(){
