@@ -18,4 +18,8 @@ public class HomePage extends BasePage
     public WebElement password;
     @FindBy(id = "login-button")
     public WebElement loginBtn;
+
+
+
+
 }
