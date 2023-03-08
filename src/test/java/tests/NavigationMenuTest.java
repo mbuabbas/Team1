@@ -37,7 +37,10 @@ public class NavigationMenuTest extends BaseTest {
         page.isDisplayed(page.Logout);
         page.isDisplayed(page.ResetAppState);
 
+
     }
+
+
 
 
 
