@@ -23,10 +23,10 @@ public class ItemsTest extends BaseTest {
     }
 
     @Test(testName = "US309: Add to cart", description = "Verify that user is able to add the items to the cart and they displayed in the cart view")
-    public void test309() {
+    public void test309() throws InterruptedException {
         //Clicking cart button
-
-        page.addToCartBtn.click();
+          page.click(page.cartElementWithItem);
+//          page.addToCartBtn.click();
         Assert.assertTrue(page.cartElementWithItem.isDisplayed());
 
     }
@@ -34,7 +34,8 @@ public class ItemsTest extends BaseTest {
     @Test(testName = "US310: Remove from cart", description = "User should be able to remove added item from the cart with a click of a button")
     public void test310() {
         page.addToCartBtn.click();
-        page.removeBtn.click();
+//        page.removeBtn.click();
+        page.click(page.removeBtn);
         Assert.assertNull(page.shoppingCrt.getAttribute("Cart is empty"));
 
 

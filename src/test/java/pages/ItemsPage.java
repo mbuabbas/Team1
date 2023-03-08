@@ -17,6 +17,9 @@ public class ItemsPage extends BasePage {
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     public WebElement addToCartBtn;
 
+//    @FindBy(id= "add-to-cart-sauce-labs-bolt-t-shirt")
+//    public WebElement getAddToCartBtn2;
+
     @FindBy(id = "shopping_cart_container")
     public WebElement cartElementWithItem;
 
