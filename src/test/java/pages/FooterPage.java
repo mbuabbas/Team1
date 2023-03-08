@@ -4,11 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import tests.BaseTest;
 
-public class UserOptionsPage extends BasePage {
+public class FooterPage extends BasePage{
 
-    public UserOptionsPage(WebDriver driver){
+    public FooterPage(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver, this);
     }
@@ -18,7 +17,7 @@ public class UserOptionsPage extends BasePage {
     public static WebElement password;
     @FindBy(id = "login-button")
     public static WebElement loginBtn;
-    @FindBy(className = "product_sort_container")
-    public static WebElement options;
+    @FindBy(className = "footer_copy")
+    public WebElement footer;
 
 }
