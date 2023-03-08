@@ -24,6 +24,7 @@ public class ItemsTest extends BaseTest {
 
     @Test(testName = "US309: Add to cart", description = "Verify that user is able to add the items to the cart and they displayed in the cart view")
     public void test309() {
+        //Clicking cart button
 
         page.addToCartBtn.click();
         Assert.assertTrue(page.cartElementWithItem.isDisplayed());
