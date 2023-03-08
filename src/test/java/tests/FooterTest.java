@@ -1,14 +1,10 @@
 package tests;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.FooterPage;
-import pages.HomePage;
 import utils.ConfigReader;
-
-import java.security.PublicKey;
 
 public class FooterTest extends BaseTest {
 
@@ -33,9 +29,7 @@ public class FooterTest extends BaseTest {
       Assert.assertTrue(expected.equals(actual));
 
 
-      //page.isDisplayed(page.footer);
 }
 
 }
 
-// it's going to fail because the copy right were updated on the website to 2023 but the user story asked to check for 2022.
