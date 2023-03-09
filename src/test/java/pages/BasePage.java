@@ -77,4 +77,5 @@ public class BasePage extends BaseTest
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+
 }

@@ -21,10 +21,29 @@ public class ProblemUserPage extends BasePage {
     @FindBy(id = "login-button")
     public WebElement loginBtn1;
 
-
-
     @FindBy(xpath = "//img[@alt='Sauce Labs Backpack']")
     public WebElement photo;
+
+// ---------------------------------------------------------------------------------------
+
+    @FindBy(xpath = "//a[@id='item_0_img_link']/img")
+     public WebElement photo0;
+
+    @FindBy(xpath ="//a[@id='item_1_img_link']/img " )
+    public WebElement photo1;
+
+    @FindBy(xpath = "//a[@id='item_5_img_link']/img")
+    public WebElement photo2;
+
+    @FindBy(xpath = "//a[@id='item_2_img_link']/img")
+    public WebElement photo3;
+
+
+    @FindBy(xpath = "//a[@id='item_4_img_link']/img")
+    public WebElement photo4;
+
+    @FindBy(xpath = "//a[@id='item_3_img_link']/img")
+    public WebElement photo5;
 
 
 }
